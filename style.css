@@ -1,0 +1,128 @@
+@font-face {
+    font-family: myFont;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: myFont;
+    background-color: hsl(0, 0%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px 20px 30% 20px;
+    padding: 40px;
+}
+.inputs{
+    display: flex;
+    width: 80%;
+    border-bottom: 2px solid hsl(0, 0%, 94%);
+    
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.input-box span{
+    padding-bottom: 5px;
+    text-transform: Uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    color: hsl(0, 1%, 44%);
+}
+.input-box span.error{
+    color: hsl(0, 100%, 67%);
+}
+.inputs .input-box{
+    width: 33%;
+}
+.input-box input{
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 15px;
+   border-radius: 5px;   
+    width: 150px;
+    height: 60px;
+    outline: none;
+    border: 2px solid hsl(0, 0%, 94%);
+}
+.input-box input.error{
+    border: 2px solid hsl(0, 100%, 67%);
+}
+.input-box input::-webkit-outer-spin-button,
+.input-box input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.input-box input:focus{
+    border: 2px solid hsl(259, 100%, 65%);
+}
+small{
+    color: red;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.submit{
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    background-color: hsl(259, 100%, 65%);
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 700px;
+    top: 290px;
+}
+.submit:hover{
+    background-color: black;
+    cursor: pointer;
+}
+.lower-box{
+    font-size: 2.5rem;
+}
+.lower-box span{
+    color: hsl(259, 100%, 65%);
+    font-weight: italic;
+    padding-right: 15px;
+}
+@media (max-width:768px){
+    .container{
+        width: 400px;
+        height: 440px;
+    }
+    .inputs{        
+        width: 100%;            
+    }
+    .input-box span{
+        font-size: 12px;
+    }
+    .input-box input{         
+        width: 100px;
+        height: 60px;
+        font-size: 25px;       
+    }
+    .submit{
+        right: 45%;
+        top: 360px;
+    }
+    .lower-box{
+        padding-top: 40px;
+        font-size: 1.5rem;
+    }
+}
